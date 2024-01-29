@@ -22,6 +22,7 @@ import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONValue;
 import org.pentaho.gwt.widgets.client.dialogs.MessageDialogBox;
+import org.pentaho.mantle.client.commands.RunInBackgroundCommand;
 import org.pentaho.mantle.client.dialogs.scheduling.ScheduleEmailDialog;
 import org.pentaho.mantle.client.dialogs.scheduling.ScheduleOutputLocationDialog;
 import org.pentaho.mantle.client.dialogs.scheduling.ScheduleParamsDialog;
@@ -35,6 +36,7 @@ public class RunInBackgroundCommandUtils implements IRunInBackgroundCommandUtils
 
   static {
     setupNativeHooks( new RunInBackgroundCommandUtils() );
+    new RunInBackgroundCommand();
   }
 
   private ScheduleOutputLocationDialog outputLocationDialog = null;
